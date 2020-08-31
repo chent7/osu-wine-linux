@@ -1,6 +1,8 @@
 # osu! on wine 5.16+
 
-#### This guide is for arch linux users, use this as a reference for other distros.
+**This guide is for arch linux users, use this as a reference for other distros.**\
+**Currently this guide is only for running osu in wine on linux. For tablet drivers follow [this](https://wiki.archlinux.org/index.php/wacom_tablet#Installation).\
+I recommend using KDE plasma as your desktop environment which has a [GUI for tablet settings](https://www.archlinux.org/packages/?name=kcm-wacomtablet).**
 
 First up, some ancient guides for running osu! on wine:\
 [Lutris install script by unknown](https://lutris.net/games/install/3548/view),
@@ -29,10 +31,11 @@ Mine will be `osu-wine`.\
 `env WINEPREFIX=~/osu-wine WINEARCH=win64 wineboot --init`\
 **say no to mono and gecko.**
 
-#### Install .NET 4.8:
-`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet48`\
-I do not recommend `-q` flag especially for installing .NET 4.0, in wine 5.16 there is a problem after installation where .NET Runtime Optimization Service causes recursive processess to fill RAM and swap space.\
-**Kill wineserver as soon as you click finish on an installation. You may have to do it multiple times (except for .net 4.8 installation).**\
+#### Install .NET 4.0-4.8:
+`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet472`\
+I do not recommend `-q` flag especially for installing .NET, in wine 5.16 there is a problem after installation where .NET Runtime Optimization Service causes recursive processess to fill RAM and swap space.\
+**Kill wineserver as soon as you click finish on an installation. You may have to do it multiple times. Select Restart Later if prompted.**\
 `WINEPREFIX=~/osu-wine wineserver -k`\
-**Select Restart Later if prompted**
 
+### Comment:
+You don't need .NET 4.8 for osu! (I believe .NET 4.5 will do). This is just me trying to see if the newer stuff works better than the older ones. Just like why I'm trying to run osu on the latest version of wine.
