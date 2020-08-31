@@ -36,8 +36,7 @@ My prefix is `osu-wine`, and I'm using 64bit, just because.\
 If sha256sum check failed, where the terminal output tells out to rename the file at a certain location, copy the file downloaded previously (windows6.1-KB976932-X86 or X64) to that location and run the line again.
 
 #### Install fonts:
-`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts vlgothic`\
-You could use `meiryo` instead of `vlgothic`, I have not tried this.
+`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts meiryo vlgothic`\
 
 ### Install .NET 4.XX
 Installing .NET is pain in wine 5.16. I have no idea which version works the best or if there is any benefit.\
@@ -55,6 +54,10 @@ This will prompt multiple installations from .NET 4.0 to 4.7.2.\
 `env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet48`\
 **Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**\
 `WINEPREFIX=~/osu-wine wineserver -k`\
+
+### Configuration
+Copy your osu! installation into your wine prefix.\
+Run it with your prefix and check that graphics and fonts are displaying correctly.
 
 ### Comment:
 32bit prefix should work exactly the same.\
