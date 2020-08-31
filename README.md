@@ -75,6 +75,18 @@ Under `Graphics`, `Window Settings`, make sure `Allow the window manager to deco
 `env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks sound=alsa`.\
 Switch to ALSA.\
 If there is still no sound, follow [this](https://wiki.archlinux.org/index.php/PulseAudio#ALSA).
+Registry file for low latency:
+```
+cat > dsound.reg << "EOF"
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Wine\DirectSound]
+"HelBuflen"="512"
+"SndQueueMax"="3"
+EOF
+
+env WINEPREFIX=~/osu-wine WINEARCH=win64 wine regedit dsound.reg
+```
 
 ### Comment:
 32bit prefix should work exactly the same.\
