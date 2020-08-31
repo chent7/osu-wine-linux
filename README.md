@@ -1,4 +1,5 @@
 # osu! on wine 5.16+
+# This guide is incomplete
 
 **This guide is for arch linux users, use this as a reference for other distros.**\
 **Currently this guide is only for running osu in wine on linux. For tablet drivers follow [this](https://wiki.archlinux.org/index.php/wacom_tablet#Installation).\
