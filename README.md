@@ -4,12 +4,15 @@
 **Currently this guide is only for running osu in wine on linux. For tablet drivers follow [this](https://wiki.archlinux.org/index.php/wacom_tablet#Installation).\
 I recommend using KDE plasma as your desktop environment which has a [GUI for tablet settings](https://www.archlinux.org/packages/?name=kcm-wacomtablet).**
 
-First up, some ancient guides for running osu! on wine:\
+Sources:\
 [Lutris install script by unknown](https://lutris.net/games/install/3548/view),
 [ThePoon's Blog](https://blog.thepoon.fr/osuLinuxAudioLatency/),
 [Francesco149's guide](https://gist.github.com/Francesco149/a2f796683a4e5195458f4bb171d88eb0),
 [AppDB wine](https://appdb.winehq.org/objectManager.php?sClass=version&iId=28025),
-[.NET 4+ on 64bit](https://www.reddit.com/r/wine_gaming/comments/8r6low/guide_how_to_install_net_45_on_64bit_prefixes/?utm_source=amp&utm_medium=&utm_content=post_body)
+[.NET 4+ on 64bit](https://www.reddit.com/r/wine_gaming/comments/8r6low/guide_how_to_install_net_45_on_64bit_prefixes/?utm_source=amp&utm_medium=&utm_content=post_body),
+[PulseAudio](https://wiki.archlinux.org/index.php/PulseAudio),
+[Gaming on arch linux](https://wiki.archlinux.org/index.php/gaming)
+[Wine ALSA PulseAudio sound](https://wiki.archlinux.org/index.php/PulseAudio#ALSA)
 
 ### Dependencies:
 Provided you have your graphics drivers, desktop environment and `PulseAudio` for sound setup, you will need:\
@@ -57,7 +60,21 @@ This will prompt multiple installations from .NET 4.0 to 4.7.2.\
 
 ### Configuration
 Copy your osu! installation into your wine prefix.\
-Run it with your prefix and check that graphics and fonts are displaying correctly.
+Run it with your prefix and check that graphics and fonts are displaying correctly.\
+Don't worry if you have no sound, we just need to check if assets are showing up nicely.\
+`env WINEPREFIX=~/osu-wine WINEARCH=win64 wine ~/path-to-osu.exe`
+
+#### winecfg
+`env WINEPREFIX=~/osu-wine WINEARCH=win64 winecfg`\
+Under `Graphics`, `Window Settings`, make sure `Allow the window manager to decorate the windows` and `Allow the window manager to control the windows` are ticked.
+
+#### Font rendering
+`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks settings fontsmooth=rgb`
+
+#### Sound
+`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks sound=alsa`.\
+Switch to ALSA.\
+If there is still no sound, follow [this](https://wiki.archlinux.org/index.php/PulseAudio#ALSA).
 
 ### Comment:
 32bit prefix should work exactly the same.\
