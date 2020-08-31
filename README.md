@@ -36,7 +36,7 @@ My prefix is `osu-wine`, and I'm using 64bit, just because.\
 If sha256sum check failed, where the terminal output tells out to rename the file at a certain location, copy the file downloaded previously (windows6.1-KB976932-X86 or X64) to that location and run the line again.
 
 #### Install fonts:
-`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts meiryo vlgothic`\
+`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts meiryo vlgothic`
 
 ### Install .NET 4.XX
 Installing .NET is pain in wine 5.16. I have no idea which version works the best or if there is any benefit.\
