@@ -27,15 +27,35 @@ You will need a **copy of osu! installation from a Windows machine**, installer 
 
 ### Setup wine prefix:
 #### Initialize:
-Mine will be `osu-wine`.\
 `env WINEPREFIX=~/osu-wine WINEARCH=win64 wineboot --init`\
-**say no to mono and gecko.**
+My prefix is `osu-wine`, and I'm using 64bit, just because.\
+**Remember to cancel the installation for Mono and Gecko.**
 
-#### Install .NET 4.0-4.8:
+#### Install gdiplus:
+`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks gdiplus`\
+If sha256sum check failed, where the terminal output tells out to rename the file at a certain location, copy the file downloaded previously (windows6.1-KB976932-X86 or X64) to that location and run the line again.
+
+#### Install fonts:
+`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts vlgothic`
+You could use `meiryo` instead of `vlgothic`, I have not tried this.
+
+### Install .NET 4.XX
+Installing .NET is pain in wine 5.16. I have no idea which version works the best or if there is any benefit.\
+I believe for osu! .NET 4.5 is required at the very least.
+
+**I do not recommend `-q` flag especially for installing .NET, in wine 5.16 there is a problem after installation where .NET Runtime Optimization Service causes recursive processess to fill RAM and swap space.**
+
+#### Install .NET 4.0-4.7.2:
 `env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet472`\
-I do not recommend `-q` flag especially for installing .NET, in wine 5.16 there is a problem after installation where .NET Runtime Optimization Service causes recursive processess to fill RAM and swap space.\
-**Kill wineserver as soon as you click finish on an installation. You may have to do it multiple times. Select Restart Later if prompted.**\
+This will prompt multiple installations from .NET 4.0 to 4.7.2.\
+**Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**\
+`WINEPREFIX=~/osu-wine wineserver -k`\
+
+#### (Optional) Install .NET 4.8:
+`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet48`\
+**Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**\
 `WINEPREFIX=~/osu-wine wineserver -k`\
 
 ### Comment:
+32bit prefix should work exactly the same.\
 You don't need .NET 4.8 for osu! (I believe .NET 4.5 will do). This is just me trying to see if the newer stuff works better than the older ones. Just like why I'm trying to run osu on the latest version of wine.
