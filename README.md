@@ -48,12 +48,12 @@ I believe for osu! .NET 4.5 is required at the very least.
 `env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet472`\
 This will prompt multiple installations from .NET 4.0 to 4.7.2.\
 **Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**\
-`WINEPREFIX=~/osu-wine wineserver -k`\
+`WINEPREFIX=~/osu-wine wineserver -k`
 
 #### (Optional) Install .NET 4.8:
 `env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet48`\
 **Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**\
-`WINEPREFIX=~/osu-wine wineserver -k`\
+`WINEPREFIX=~/osu-wine wineserver -k`
 
 ### Configuration
 Copy your osu! installation into your wine prefix.\
