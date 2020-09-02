@@ -78,6 +78,11 @@ Switch to ALSA.\
 If there is still no sound, follow [this](https://wiki.archlinux.org/index.php/PulseAudio#ALSA).
 
 #### Registry file for low latency (Not Recommended):
+This registry edit was from Francesco149's guide.
+I'm not recommending it because it introduces stuttering, with some freezing the game for up to 3 seconds.
+While changes after applying this registry file is noticable, there isn't a lot of latency to begin with.
+Looking at higher values for `HelBuflen` and `SndQueueMax` might work.
+More about these values [here](https://wiki.winehq.org/Useful_Registry_Keys) and [here](https://www.codeweavers.com/support/wiki/linux/faq/cxoffice_soundissues).
 ```
 cat > dsound.reg << "EOF"
 Windows Registry Editor Version 5.00
