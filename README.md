@@ -16,7 +16,7 @@ Sources:\
 
 ### Dependencies:
 Provided you have your graphics drivers, desktop environment and `PulseAudio` for sound setup, you will need:\
-`wine` or `wine-staging` (5.16 at the time of writing)\
+`wine-staging` (5.16 at the time of writing)\
 `winetricks`\
 `lib32-libxcomposite` (if osu! fails to render and exits)\
 `lib32-gnutls` (if osu! fails to connect to the internet)\
