@@ -29,11 +29,11 @@ You will need a **copy of osu! installation from a Windows machine**, installer 
 
 ### Setup wine prefix:
 #### Initialize:
+My prefix is `osu-wine`, and I'm using 64bit, just because.\
+**Remember to cancel the installation for Mono and Gecko.**
 ```
 env WINEPREFIX=~/osu-wine WINEARCH=win64 wineboot --init
 ```
-My prefix is `osu-wine`, and I'm using 64bit, just because.\
-**Remember to cancel the installation for Mono and Gecko.**
 
 #### Install gdiplus:
 `env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks gdiplus`\
