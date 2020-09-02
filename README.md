@@ -21,8 +21,6 @@ Provided you have your graphics drivers, desktop environment and `PulseAudio` fo
 `winetricks`\
 `lib32-libxcomposite` (if osu! fails to render and exits)\
 `lib32-gnutls` (if osu! fails to connect to the internet)\
-~~`samba` (installation of .NET 4.0)~~\
-~~`lib32-krb5` (installation of .NET 4.0)~~
 
 ### Preperation:
 You will need a **copy of osu! installation from a Windows machine**, installer doesn't work in wine 5.16.
