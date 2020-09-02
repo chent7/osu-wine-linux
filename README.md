@@ -36,13 +36,15 @@ env WINEPREFIX=~/osu-wine WINEARCH=win64 wineboot --init
 ```
 
 #### Install gdiplus:
-If sha256sum check failed, look at where the terminal output tells you to rename KB976932.exe. Copy the file downloaded previously (windows6.1-KB976932-X86 or X64) to that location and run the line again.\
+If sha256sum check failed, look at where the terminal output tells you to rename KB976932.exe. Copy the file downloaded previously (windows6.1-KB976932-X86 or X64) to that location and run the line again.
 ```
 env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks gdiplus
 ```
 
 #### Install fonts:
-`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts meiryo vlgothic`
+```
+env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts meiryo vlgothic
+```
 
 ### Install .NET 4.XX
 Installing .NET is pain in wine 5.16. I have no idea which version works the best or if there is any benefit.\
@@ -51,31 +53,48 @@ I believe for osu! .NET 4.5 is required at the very least.
 **I do not recommend `-q` flag especially for installing .NET, in wine 5.16 there is a problem after installation where .NET Runtime Optimization Service causes recursive processess to fill RAM and swap space.**
 
 #### Install .NET 4.0-4.7.2:
-`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet472`\
+```
+env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet472
+```
 This will prompt multiple installations from .NET 4.0 to 4.7.2.\
 **Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**\
-`WINEPREFIX=~/osu-wine wineserver -k`
+```
+WINEPREFIX=~/osu-wine wineserver -k
+```
 
 #### (Optional) Install .NET 4.8:
-`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet48`\
+```
+env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet48
+```
 **Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**\
-`WINEPREFIX=~/osu-wine wineserver -k`
+```
+WINEPREFIX=~/osu-wine wineserver -k
+```
 
 ### Configuration
 Copy your osu! installation into your wine prefix.\
 Run it with your prefix and check that graphics and fonts are displaying correctly.\
 Don't worry if you have no sound, we just need to check if assets are showing up nicely.\
-`env WINEPREFIX=~/osu-wine WINEARCH=win64 wine ~/path-to-osu.exe`
+```
+env WINEPREFIX=~/osu-wine WINEARCH=win64 wine ~/path-to-osu.exe
+```
 
 #### winecfg
-`env WINEPREFIX=~/osu-wine WINEARCH=win64 winecfg`\
+```
+env WINEPREFIX=~/osu-wine WINEARCH=win64 winecfg
+```
 Under `Graphics`, `Window Settings`, make sure `Allow the window manager to decorate the windows` and `Allow the window manager to control the windows` are ticked.
 
-#### Font rendering
-`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks settings fontsmooth=rgb`
+#### Font rendering (Optional)
+This step may not be needed at all. 
+```
+env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks settings fontsmooth=rgb
+```
 
 #### Sound
-`env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks sound=alsa`.\
+```
+env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks sound=alsa
+```
 Switch to ALSA. Remember to install `pulseaudio-alsa` if you are using PulseAudio, or follow wiki guide [here](https://wiki.archlinux.org/index.php/PulseAudio#ALSA).
 
 #### Registry file for low latency (Not Recommended):
