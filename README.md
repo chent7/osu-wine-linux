@@ -74,8 +74,7 @@ Under `Graphics`, `Window Settings`, make sure `Allow the window manager to deco
 
 #### Sound
 `env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks sound=alsa`.\
-Switch to ALSA.\
-If there is still no sound, follow [this](https://wiki.archlinux.org/index.php/PulseAudio#ALSA).
+Switch to ALSA. Remember to install `pulseaudio-alsa` if you are using PulseAudio, or follow wiki guide [here](https://wiki.archlinux.org/index.php/PulseAudio#ALSA).
 
 #### Registry file for low latency (Not Recommended):
 This registry edit was from Francesco149's guide.
