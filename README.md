@@ -37,7 +37,9 @@ env WINEPREFIX=~/osu-wine WINEARCH=win64 wineboot --init
 
 #### Install gdiplus:
 If sha256sum check failed, look at where the terminal output tells you to rename KB976932.exe. Copy the file downloaded previously (windows6.1-KB976932-X86 or X64) to that location and run the line again.\
-```env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks gdiplus```
+```
+env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks gdiplus
+```
 
 #### Install fonts:
 `env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts meiryo vlgothic`
