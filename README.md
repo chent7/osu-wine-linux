@@ -80,13 +80,14 @@ env WINEPREFIX=~/osu-wine WINEARCH=win64 winecfg
 Under `Graphics`, `Window Settings`, make sure `Allow the window manager to decorate the windows` and `Allow the window manager to control the windows` are ticked.
 
 #### Install fonts:
-# If you don't have access to a Windows computer:
+**If you don't have access to a Windows computer:**
 ```
 env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts meiryo vlgothic
 ```
-# If you have access to a Windows computer:\
+**If you have access to a Windows computer:**\
 Create a folder `.fonts` in your home directory. This is where self installed fonts go, and wine will look for fonts here.\
 Goto `C:\Windows|fonts` on your Windows machine and copy everything inside to `~/.fonts`
+Fonts in this folder won't effect other programs like `chrome` if you already have replacement fonts installed.
 
 #### Font rendering (Optional)
 This step may not be needed at all. 
