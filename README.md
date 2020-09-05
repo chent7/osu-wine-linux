@@ -40,11 +40,6 @@ If sha256sum check failed, look at where the terminal output tells you to rename
 env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks gdiplus
 ```
 
-#### Install fonts:
-```
-env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts meiryo vlgothic
-```
-
 ### Install .NET 4.XX
 Installing .NET is pain in wine 5.16. I have no idea which version works the best or if there is any benefit.\
 I believe for osu! .NET 4.5 is required at the very least.
@@ -83,6 +78,15 @@ env WINEPREFIX=~/osu-wine WINEARCH=win64 wine ~/path-to-osu.exe
 env WINEPREFIX=~/osu-wine WINEARCH=win64 winecfg
 ```
 Under `Graphics`, `Window Settings`, make sure `Allow the window manager to decorate the windows` and `Allow the window manager to control the windows` are ticked.
+
+#### Install fonts:
+# If you don't have access to a Windows computer:
+```
+env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts meiryo vlgothic
+```
+# If you have access to a Windows computer:\
+Create a folder `.fonts` in your home directory. This is where self installed fonts go, and wine will look for fonts here.\
+Goto `C:\Windows|fonts` on your Windows machine and copy everything inside to `~/.fonts`
 
 #### Font rendering (Optional)
 This step may not be needed at all. 
