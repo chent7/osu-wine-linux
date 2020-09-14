@@ -126,4 +126,4 @@ env WINEPREFIX=~/osu-wine WINEARCH=win64 wine regedit dsound.reg
 ```
 #### Then, follow [this](https://wiki.archlinux.org/index.php/gaming#Tuning_PulseAudio).
 #### Matching hardware buffers follow [this](https://forums.linuxmint.com/viewtopic.php?f=42&t=44862):
-Location is `.config/pulse/`. Log out of your DE and use TTY instead.
+User directory is `.config/pulse/`. **Remember to Log out of your DE and use TTY instead.**
