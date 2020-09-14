@@ -66,6 +66,7 @@ WINEPREFIX=~/osu-wine wineserver -k
 ```
 
 ### Configuration
+**Before this step, make sure you install all dependencies and OpenGL drivers for your graphics card. Then reboot.**
 Copy your osu! installation into your wine prefix.\
 Run it with your prefix and check that graphics and fonts are displaying correctly.\
 Don't worry if you have no sound, we just need to check if assets are showing up nicely.\
