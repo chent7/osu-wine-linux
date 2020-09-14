@@ -73,6 +73,8 @@ Don't worry if you have no sound, we just need to check if assets are showing up
 env WINEPREFIX=~/osu-wine WINEARCH=win64 wine ~/path-to-osu.exe
 ```
 
+**As of wine-staging 5.17, osu! installer should work**
+
 #### winecfg
 ```
 env WINEPREFIX=~/osu-wine WINEARCH=win64 winecfg
