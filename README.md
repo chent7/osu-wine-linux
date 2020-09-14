@@ -107,7 +107,7 @@ env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks sound=alsa
 ```
 Switch to ALSA. Remember to install `pulseaudio-alsa` if you are using PulseAudio, or follow wiki guide [here](https://wiki.archlinux.org/index.php/PulseAudio#ALSA).
 
-#### Registry file for low latency (Not Recommended):
+#### Registry file for low latency:
 This registry edit was from Francesco149's guide.
 I'm not recommending it because it introduces stuttering, with some freezing the game for up to 3 seconds.
 While changes after applying this registry file is noticable, there isn't a lot of latency to begin with.
@@ -124,13 +124,6 @@ EOF
 
 env WINEPREFIX=~/osu-wine WINEARCH=win64 wine regedit dsound.reg
 ```
-#### Do not use the registry file, follow [this](https://wiki.archlinux.org/index.php/gaming#Tuning_PulseAudio) instead.
+#### Then, follow [this](https://wiki.archlinux.org/index.php/gaming#Tuning_PulseAudio).
 #### Matching hardware buffers follow [this](https://forums.linuxmint.com/viewtopic.php?f=42&t=44862):
 Location is `.config/pulse/`. Log out of your DE and use TTY instead.
-
-
-
-
-### Comment:
-32bit prefix should work exactly the same.\
-You don't need .NET 4.8 for osu! (I believe .NET 4.5 will do). This is just me trying to see if the newer stuff works better than the older ones. Just like why I'm trying to run osu on the latest version of wine.
