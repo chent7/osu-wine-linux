@@ -1,4 +1,4 @@
-# osu! on wine 5.16+ archlinux
+# osu! on wine 5.17 archlinux
 
 **This guide is for arch linux users, use this as a reference for other distros.**\
 **Currently this guide is only for running osu in wine on linux. For tablet drivers follow [this](https://wiki.archlinux.org/index.php/wacom_tablet#Installation).\
@@ -15,19 +15,19 @@ Sources:\
 [Wine ALSA PulseAudio sound](https://wiki.archlinux.org/index.php/PulseAudio#ALSA)
 
 ### Dependencies:
-Provided you have your graphics drivers, desktop environment and `PulseAudio` for sound setup, you will need:\
-`wine-staging` (5.16 at the time of writing)\
+`pulseaudio`\
+`wine-staging`\
 `winetricks`\
-`lib32-libxcomposite` (if osu! fails to render and exits)\
-`lib32-gnutls` (if osu! fails to connect to the internet)\
-`pulseaudio-alsa`
-`lib32-libpulse`
+`lib32-libxcomposite`\
+`lib32-gnutls`\
+`pulseaudio-alsa`\
+`lib32-libpulse`\
 `lib32-alsa-plugins`
 
 ### Preperation:
-You will need a **copy of osu! installation from a Windows machine**, installer doesn't work in wine 5.16.
-
-**gdiplus**: [windows6.1-KB976932-X86](http://download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe) or [windows6.1-KB976932-X64](http://download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe) depending on your prefix, because winetricks 🙂. Keep these files just in case.
+osu! installer\
+Copy of Windows 10 fonts\
+gdiplus: [windows6.1-KB976932-X86](http://download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe) (32-bit) or [windows6.1-KB976932-X64](http://download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe) (64-bit)
 
 ### Setup wine prefix:
 #### Initialize:
@@ -87,6 +87,8 @@ Under `Graphics`, `Window Settings`, make sure `Allow the window manager to deco
 
 #### Install fonts:
 **If you don't have access to a Windows computer:**
+
+https://wiki.archlinux.org/index.php/Microsoft_fonts#Extracting_fonts_from_a_Windows_ISO
 ```
 env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks cjkfonts meiryo vlgothic
 ```
