@@ -59,8 +59,8 @@ WINEPREFIX=~/osu-wine wineserver -k
 ```
 
 ### Configuration
-**Before this step, make sure you install all dependencies and OpenGL drivers for your graphics card. Then reboot.**
-**As of wine 5.17, osu! installer should work**
+**Before this step, make sure you install all dependencies and OpenGL drivers for your graphics card. Then reboot.**\
+**As of wine 5.17, osu! installer should work**\
 Installation:
 ```
 env WINEPREFIX=~/osu-wine WINEARCH=win64 wine ~/path-to-osu\!-installer.exe
