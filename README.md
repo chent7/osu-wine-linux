@@ -926,7 +926,7 @@ Icon=/home/your-username/.osu-wine/icon.png
 StartupWMClass=osu!.exe
 Categories=Games
 ```
-**Symlink for easy access**
+**Symlink for easy access**\
 Symlink globally:
 ```
 ln -sf ~/path-to-desktop-file/osu\!/.desktop /usr/share/applications/osu\!/.desktop
