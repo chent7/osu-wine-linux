@@ -882,6 +882,6 @@ uncomment and edit this line:
 resample-method = speex-float-10
 ```
 
-**Then, for matching hardware buffers follow [this](https://forums.linuxmint.com/viewtopic.php?f=42&t=44862):**
-**Log out of your DE and use TTY instead when following.**
+**Then, for matching hardware buffers follow [this](https://forums.linuxmint.com/viewtopic.php?f=42&t=44862):**\
+**Log out of your DE and use TTY instead when following.**\
 Remember local config for PulseAudio is at  `~/.config/pulse/`.
