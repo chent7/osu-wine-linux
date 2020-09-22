@@ -26,7 +26,7 @@ Sources:\
 
 ### Preperation:
 osu! installer\
-Copy of Windows 10 fonts\
+Windows 10 fonts\
 gdiplus: [windows6.1-KB976932-X86](http://download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe) (32-bit) or [windows6.1-KB976932-X64](http://download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe) (64-bit)
 
 ### Setup wine prefix:
