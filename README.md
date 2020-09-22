@@ -45,7 +45,7 @@ Install .NET 4.7.2:
 env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet472
 ```
 This will prompt multiple installations from .NET 4.0 to 4.7.2.\
-**Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**\
+**Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**
 ```
 WINEPREFIX=~/osu-wine wineserver -k
 ```
@@ -53,7 +53,7 @@ Install .NET 4.8:
 ```
 env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks dotnet48
 ```
-**Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**\
+**Kill wineserver as soon as you click finish on an installation. Select Restart Later if prompted.**
 ```
 WINEPREFIX=~/osu-wine wineserver -k
 ```
@@ -885,3 +885,53 @@ resample-method = speex-float-10
 **Then, for matching hardware buffers follow [this](https://forums.linuxmint.com/viewtopic.php?f=42&t=44862):**\
 **Log out of your DE and use TTY instead when following.**\
 Remember local config for PulseAudio is at  `~/.config/pulse/`.
+
+### Discord Rich Presence
+Grab the exe file from [here](https://github.com/0e4ef622/wine-discord-ipc-bridge).
+Run this exe file with the prefix and then osu! for working rpc.
+
+### Launch Script
+My launch script:\
+Ignore lines with picom if you don't use it.\
+```
+#!/bin/sh
+
+export vblank_mode=0
+export WINEPREFIX=$HOME/.osu-wine/
+export WINEARCH=win64
+
+killall picom
+wine $HOME/.osu-wine/winediscordipcbridge.exe &
+sleep 1
+wine $HOME/.osu-wine/osu!/osu!.exe
+
+wait
+wineserver -k
+picom &
+```
+Make sure to set executable:
+```
+chmod +x launch-osu.sh
+```
+
+### Desktop File
+Desktop file should look something like this.
+```
+[Desktop Entry]
+Encoding=UTF-8
+Name=osu!
+Type=Application
+Exec="/home/your-username/.osu-wine/launch-osu.sh"
+Icon=/home/your-username/.osu-wine/icon.png
+StartupWMClass=osu!.exe
+Categories=Games
+```
+**Symlink for easy access**
+Symlink globally:
+```
+ln -sf ~/path-to-desktop-file/osu\!/.desktop /usr/share/applications/osu\!/.desktop
+```
+Symlink locally:
+```
+ln -sf ~/path-to-desktop-file/osu\!/.desktop ~/.local/share/applications/osu\!/.desktop
+```
