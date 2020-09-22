@@ -72,7 +72,7 @@ env WINEPREFIX=~/osu-wine WINEARCH=win64 winecfg
 Under `Graphics`, `Window Settings`, make sure `Allow the window manager to decorate the windows` and `Allow the window manager to control the windows` are ticked.
 
 ### Fonts:
-Since winetricks options for fonts no longer works for osu!, I'm going to force install fonts.
+Since winetricks options for fonts no longer works for osu!, I'm going to force install fonts.\
 Read about extracting Windows 10 fonts [here](https://wiki.archlinux.org/index.php/Microsoft_fonts#Extracting_fonts_from_a_Windows_ISO) if you don't have a copy.\
 Create 2 registry files:
 ```
@@ -848,7 +848,7 @@ env WINEPREFIX=~/osu-wine WINEARCH=win64 winetricks sound=alsa
 Switch to ALSA. Remember to install `pulseaudio-alsa` if you are using PulseAudio, or follow wiki guide [here](https://wiki.archlinux.org/index.php/PulseAudio#ALSA).
 
 **Registry file for low latency:**
-This registry edit was from Francesco149's guide.
+This registry edit was from Francesco149's guide.\
 More about these values [here](https://wiki.winehq.org/Useful_Registry_Keys) and [here](https://www.codeweavers.com/support/wiki/linux/faq/cxoffice_soundissues).
 ```
 cat > dsound.reg << "EOF"
@@ -863,8 +863,8 @@ env WINEPREFIX=~/osu-wine WINEARCH=win64 wine regedit dsound.reg
 ```
 
 **Tuning PulseAudio**
-More information [here](https://wiki.archlinux.org/index.php/gaming#Tuning_PulseAudio).
-copy PulseAudio config file to edit locally.
+More information [here](https://wiki.archlinux.org/index.php/gaming#Tuning_PulseAudio).\
+Copy PulseAudio config file to edit locally.
 ```
 cp /etc/pulse/daemon.conf ~/.config/pulse/daemon.conf
 vim ~/.config/pulse/daemon.conf
@@ -887,7 +887,7 @@ resample-method = speex-float-10
 Remember local config for PulseAudio is at  `~/.config/pulse/`.
 
 ### Discord Rich Presence
-Grab the exe file from [here](https://github.com/0e4ef622/wine-discord-ipc-bridge).
+Grab the exe file from [here](https://github.com/0e4ef622/wine-discord-ipc-bridge).\
 Run this exe file with the prefix and then osu! for working rpc.
 
 ### Launch Script
