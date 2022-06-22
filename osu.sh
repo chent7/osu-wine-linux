@@ -3,7 +3,7 @@
 export vblank_mode=0
 export WINEPREFIX="$HOME/.osu-wine"
 export WINEARCH=win32
-export PIPEWIRE_LATENCY=128/48000
+export PIPEWIRE_LATENCY=128/48000 # for pipewire latency (obviously), much better than pulseaudio
 
 pgrep -x winediscordipcbridge.exe > /dev/null || wine "$HOME/.resources/osu!/winediscordipcbridge.exe" &
 
