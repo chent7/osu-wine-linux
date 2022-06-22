@@ -17,6 +17,7 @@ Windows 10 fonts
 
 ### Wine Setup:
 Some versions of wine will have trouble with winetricks commands.\
+You're on your own for those.
 ```
 env WINEPREFIX=~/.osu-wine WINEARCH=win32 wineboot --init
 env WINEPREFIX=~/.osu-wine WINEARCH=win32 winetricks sound=alsa
