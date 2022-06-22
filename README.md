@@ -1,20 +1,6 @@
 # WIP do not blindly follow
 
-# osu! on wine 5.17 archlinux
-
-**This guide is for arch linux users, use this as a reference for other distros.**\
-**Currently this guide is only for running osu in wine on linux. For tablet drivers follow [this](https://wiki.archlinux.org/index.php/wacom_tablet#Installation).\
-I recommend using KDE plasma as your desktop environment which has a [GUI for tablet settings](https://www.archlinux.org/packages/?name=kcm-wacomtablet).**
-
-Sources:\
-[Lutris install script by unknown](https://lutris.net/games/install/3548/view),
-[ThePoon's Blog](https://blog.thepoon.fr/osuLinuxAudioLatency/),
-[Francesco149's guide](https://gist.github.com/Francesco149/a2f796683a4e5195458f4bb171d88eb0),
-[AppDB wine](https://appdb.winehq.org/objectManager.php?sClass=version&iId=28025),
-[.NET 4+ on 64bit](https://www.reddit.com/r/wine_gaming/comments/8r6low/guide_how_to_install_net_45_on_64bit_prefixes/?utm_source=amp&utm_medium=&utm_content=post_body),
-[PulseAudio](https://wiki.archlinux.org/index.php/PulseAudio),
-[Gaming on arch linux](https://wiki.archlinux.org/index.php/gaming)
-[Wine ALSA PulseAudio sound](https://wiki.archlinux.org/index.php/PulseAudio#ALSA)
+# osu! on wine (arch)
 
 ### Dependencies:
 `pulseaudio`\
@@ -25,6 +11,7 @@ Sources:\
 `pulseaudio-alsa`\
 `lib32-libpulse`\
 `lib32-alsa-plugins`
+Best way to make sure you have all of the graphics dependencies is to install `steam-native-runtime`
 
 ### Preperation:
 osu! installer\
