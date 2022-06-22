@@ -10,7 +10,7 @@
 `lib32-gnutls`\
 `pulseaudio-alsa`\
 `lib32-libpulse`\
-`lib32-alsa-plugins`
+`lib32-alsa-plugins` \
 Best way to make sure you have all of the graphics dependencies is to install `steam-native-runtime`
 
 ### Preperation:
