@@ -1,3 +1,5 @@
+# WIP do not blindly follow
+
 # osu! on wine 5.17 archlinux
 
 **This guide is for arch linux users, use this as a reference for other distros.**\
