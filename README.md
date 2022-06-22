@@ -1,6 +1,7 @@
 # osu! on wine
 
-### If someone knows a cleaner way to deal with fonts let me know
+### If someone knows a cleaner way to deal with fonts please let me know
+### If someone knows which (latest) version of dotnet osu actually needs please let me know
 
 ### Dependencies (arch):
 Best way to make sure you have all of the graphics dependencies is to install `steam-native-runtime` \
