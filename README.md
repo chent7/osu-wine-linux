@@ -12,6 +12,8 @@ Best way to make sure you have all of the graphics dependencies is to install `s
 `pulseaudio-alsa`\
 `lib32-libpulse`\
 `lib32-alsa-plugins`\
+
+### IMPORTANT:
 `samba` (fixes ntlm_auth errors)
 
 
