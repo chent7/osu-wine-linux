@@ -11,7 +11,9 @@ Best way to make sure you have all of the graphics dependencies is to install `s
 `lib32-gnutls`\
 `pulseaudio-alsa`\
 `lib32-libpulse`\
-`lib32-alsa-plugins`
+`lib32-alsa-plugins`\
+`samba` (fixes ntlm_auth errors)
+
 
 ### Preperation:
 Windows 10 fonts
