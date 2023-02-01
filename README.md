@@ -5,11 +5,11 @@
 
 ### Dependencies (arch):
 Best way to make sure you have all of the graphics dependencies is to install `steam-native-runtime` \
-~~`pulseaudio`~~ `pipewire` for performance \
+~~`pulseaudio`~~ `pipewire` `wireplumber` `pipewire-pulse` `lib32-pipewire` for performance \
 `winetricks`\
 `lib32-libxcomposite`\
 `lib32-gnutls`\
-`pulseaudio-alsa`\
+~~`pulseaudio-alsa`~~ only if you use `pulseaudio`\
 `lib32-libpulse`\
 `lib32-alsa-plugins`\
 
@@ -32,7 +32,10 @@ env WINEPREFIX=~/.osu-wine WINEARCH=win32 winetricks -q dotnet472 dotnet48
 
 env WINEPREFIX=~/.osu-wine WINEARCH=win32 wine regedit font-1.reg
 env WINEPREFIX=~/.osu-wine WINEARCH=win32 wine regedit font-2.reg
-env WINEPREFIX=~/.osu-wine WINEARCH=win32 wine regedit dsound.reg
+
+# I'm doubting if this reg edit is necessary anymore
+# Since the performance of pipewire is so good now
+~~env WINEPREFIX=~/.osu-wine WINEARCH=win32 wine regedit dsound.reg~~
 
 cp path-to-windows-fonts/* ~/.osu-wine/drive_c/windows/Fonts/*
 ```
