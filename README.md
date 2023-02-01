@@ -35,7 +35,7 @@ env WINEPREFIX=~/.osu-wine WINEARCH=win32 wine regedit font-2.reg
 
 # I'm doubting if this reg edit is necessary anymore
 # Since the performance of pipewire is so good now
-~~env WINEPREFIX=~/.osu-wine WINEARCH=win32 wine regedit dsound.reg~~
+env WINEPREFIX=~/.osu-wine WINEARCH=win32 wine regedit dsound.reg
 
 cp path-to-windows-fonts/* ~/.osu-wine/drive_c/windows/Fonts/*
 ```
